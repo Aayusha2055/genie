@@ -34,6 +34,9 @@
     <!-- owl-carousel -->
     <link rel="stylesheet" href="/assets/css/owl.carousel.css">
     <link rel="stylesheet" href="/assets/css/owl.theme.default.css">
+    <!-- swupjs -->
+    <script src="https://cdn.jsdelivr.net/npm/swup@2.0.11/dist/swup.min.js"></script>
+
 </head>
 
 <body>
@@ -43,16 +46,19 @@
     <main class="transition-fade" id="swup">
         <!-- navigation -->
         <section id="gallery-menu">
-            <div class="jumbotron-fluid">
-                <div class="d-flex flex-row">
-                    <main id="swup" class="transition-fade">
-                        <button class="btn"><a href="/views/layouts/main.html" class=""><i class="fa fa-angle-left fa-fw"></i>Back To Home</a></button>
-                    </main>
-                    <div class="search-form ml-auto">
-                        <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
-                        </form>
+            <div class="container-fluid">
+                <div class="d-flex flex-row align-items-center">
+                    <a href="/views/layouts/main.html" class="backlink-home"><i class="fa fa-times fa-2x fa-fw"></i></a>
+                    <div class="search-box ml-auto">
+                        <div class="input-search">
+                            <form class="form-inline my-2 my-lg-0 search">
+                                <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search" aria-label="Search">
+                                <div class="search-icon">
+                                    <span><i class="fa fa-search"></i></span>
+                                </div>
+                            </form>
+                        </div>
+
                     </div>
 
                 </div>
@@ -78,24 +84,7 @@
     <!-- smooth-scroll -->
     <script src="/assets/js/smooth-scroll.js"></script>
 
-
-    <!-- swupjs -->
-    <script src="https://cdn.jsdelivr.net/npm/swup@2.0.11/dist/swup.min.js"></script>
-
     <script>
-        $('.filter-icon').click(function() {
-            $("select").removeClass('d-none')
-        })
-        $("select")
-            .change(function() {
-                var str = "";
-                $("select option:selected").each(function() {
-                    str += $(this).text() + " ";
-                });
-                $(".selected-option-val").text(str);
-                $("select").addClass('d-none')
-            })
-            .trigger("change");
     </script>
 </body>
 
